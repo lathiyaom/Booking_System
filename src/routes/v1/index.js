@@ -1,7 +1,9 @@
 const express = require("express");
-
+const bookingRoutes = require("./booking-routes")
 
 const router = express.Router();
-// Handles /v1/student
 
-module.exports = router; // Export the router directly (not as an object)
+
+router.use("/booking", bookingRoutes);
+
+module.exports = router;
